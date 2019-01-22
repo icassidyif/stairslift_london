@@ -15,8 +15,6 @@ body{
   height: 100%;
 }
 .page{
-  overflow-y: scroll;
-  flex: 1 auto;
 }
 .wrapper{
   margin: 0 auto;
@@ -70,7 +68,7 @@ a {
 [href^="tel:"] ,[href^="mailto:"] {
   text-decoration: none;
 }
-
+/*Header-line---------------------------*/
 .header__line {
   background: #f2f2f2;
   text-align: center;
@@ -83,14 +81,17 @@ a {
   font-weight: 500;
 }
 
+/*Logo----------------------------------*/
+
 .logo {
   display: inline-block;
 }
 
+
+
+/*main menu-----------------------------*/
 .main-nav {
-
 }
-
 .main-nav ul {
   position: fixed;
   top: 0;
@@ -99,7 +100,6 @@ a {
   bottom: 0;
   background: rgba(255,255,255,.8);
   display: flex;
-  justify-content: center;
   align-items: center;
   list-style: none;
   overflow-y: auto;
@@ -107,7 +107,16 @@ a {
   flex-direction: column;
 }
 
+.main-nav li:first-child {
+  margin-top: auto;
+}
+.main-nav li:last-child {
+  margin-bottom: auto;
+}
+
 .main-nav ul li a {
   text-decoration: none;
   color: #7d7d7d;
 }
+
+/*--------------------*/
