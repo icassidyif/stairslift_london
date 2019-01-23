@@ -78,7 +78,7 @@ img {
 [href^="tel:"] ,[href^="mailto:"] {
   text-decoration: none;
 }
-
+/*Header-line---------------------------*/
 .header__line {
   background: #f2f2f2;
   text-align: center;
@@ -91,9 +91,12 @@ img {
   font-weight: 500;
 }
 
+/*Logo----------------------------------*/
+
 .logo {
   display: inline-block;
 }
+
 
 .column-logo, .column-main-nav {
   width: auto;
@@ -103,6 +106,12 @@ img {
   font-size: 14px;
 }
 
+
+
+
+/*main menu-----------------------------*/
+.main-nav {
+}
 .main-nav ul {
   position: fixed;
   top: 0;
@@ -127,13 +136,16 @@ img {
 }
 
 .main-nav ul li:last-child {
-  margin-bottom: auto;
+ margin-bottom: auto;
+
 }
+
 
 .main-nav ul li a {
   text-decoration: none;
   color: #7d7d7d;
 }
+
 
 .main-nav ul li a:hover {
   color: #cec9c9;
