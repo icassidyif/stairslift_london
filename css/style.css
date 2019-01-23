@@ -15,7 +15,6 @@ body{
   height: 100%;
 }
 .page{
-  overflow-y: scroll;
   flex: 1 auto;
 }
 .wrapper{
@@ -32,10 +31,17 @@ body{
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+
 .row {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
+  justify-content: space-between;
+}
+
+.header__main .row{
+  flex-wrap: nowrap;
 }
 
 [class*="column-"] {
@@ -66,7 +72,9 @@ body{
 a {
   color: inherit;
 }
-
+img {
+  max-width: 100%;
+}
 [href^="tel:"] ,[href^="mailto:"] {
   text-decoration: none;
 }
@@ -87,19 +95,22 @@ a {
   display: inline-block;
 }
 
-.main-nav {
+.column-logo, .column-main-nav {
+  width: auto;
+}
 
+.main-nav {
+  font-size: 14px;
 }
 
 .main-nav ul {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   width: 100%;
   bottom: 0;
   background: rgba(255,255,255,.8);
   display: flex;
-  justify-content: center;
   align-items: center;
   list-style: none;
   overflow-y: auto;
@@ -107,7 +118,54 @@ a {
   flex-direction: column;
 }
 
+.main-nav.is-active ul {
+  left: 0;
+}
+
+.main-nav ul li:first-child {
+  margin-top: auto;
+}
+
+.main-nav ul li:last-child {
+  margin-bottom: auto;
+}
+
 .main-nav ul li a {
   text-decoration: none;
   color: #7d7d7d;
+}
+
+.main-nav ul li a:hover {
+  color: #cec9c9;
+}
+
+.main-nav ul li.is-active a{
+ color: #8dc63f;
+ font-weight: bold;
+}
+
+.main-nav__opener .fas {
+  font-size: 3em;
+  color: #636363;
+  cursor: pointer;
+}
+
+.main-nav__opener {
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width:1050px ) {
+  .main-nav__opener {
+    display: none;
+  }
+
+  .main-nav ul {
+    position: static;
+    flex-direction: row;
+    margin-top: 15px;
+  }
+  .main-nav ul li {
+    margin-right: 30px;
+  }
 }
