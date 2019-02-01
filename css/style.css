@@ -73,7 +73,9 @@ body{
 .m-b-30 {
   margin-bottom: 30px;
 }
-
+.m-b-20 {
+  margin-bottom: 20px;
+}
 /*-------------------BLOCKS-----------------------*/
 a {
   color: inherit;
@@ -173,9 +175,42 @@ img {
   z-index: 2;
 }
 
+/*info------------------------------------*/
+.info {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.info__icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #98c63f;
+  border-radius: 2px;
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  margin-right: 25px;
+}
+.info__text {
+  color: #7d7d7d;
+  padding-top: 10px;
+}
 
+.ta-center {
+  text-align: center;
+}
 
-
+.icon-headphones {
+  width: 51px;
+  height: 49px;
+  background-position: -5px -51px;
+}
+.icon {
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+}
 /*stairlift-type--------------------------*/
 
 .stairlift-type {
@@ -206,6 +241,32 @@ img {
   text-align: center;
   font-family:  'Poppins', sens-serif;
 }
+
+.section_green {
+  color: #fff;
+  background: #98c63f;
+}
+.section_green .section__title {
+  color: #fff;
+}
+/*promise---------------------------------*/
+.promice {
+  text-align: center;
+}
+.promice__icon {
+  min-height: 90px;
+  color: #98c63f;
+  font-size: 72px;
+}
+.promice__title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #98c63f;
+  font-family: "Poppins", sans-serif;
+}
+.promice__text {
+  color: #7d7d7d;
+}
 /*-----------------------------------------*/
 @media (min-width:1050px ) {
   .main-nav__opener {
@@ -225,6 +286,9 @@ img {
   /*phablet*/
   .column-phablet-1-2 {
     max-width: 50%;
+  }
+  .info {
+    display: flex;
   }
 }
 
